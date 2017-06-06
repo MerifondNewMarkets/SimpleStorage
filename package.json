@@ -1,6 +1,6 @@
 {
   "name": "simplestorage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a thin wrapper around LocalStorage/SessionStorage/InMemory Storage",
   "main": "dist/index.js",
   "types" : "dist/index.d.ts",
