@@ -1,0 +1,50 @@
+{
+  "name": "simplestorage",
+  "version": "1.0.0",
+  "description": "Provides a thin wrapper around LocalStorage/SessionStorage/InMemory Storage",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage",
+    "build": "tsc -p .",
+    "precommit": "npm test",
+    "release": "npm build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MerifondNewMarkets/SimpleStorage.git"
+  },
+  "keywords": [
+    "storage",
+    "key-value",
+    "localstorage"
+  ],
+  "author": "Valentin Zwick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MerifondNewMarkets/SimpleStorage/issues"
+  },
+  "homepage": "https://github.com/MerifondNewMarkets/SimpleStorage#readme",
+  "devDependencies": {
+    "@types/jest": "^19.2.4",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.5"
+  },
+  "dependencies": {
+    "typescript": "^2.3.4"
+  },
+  "jest" : {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
