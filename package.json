@@ -3,14 +3,14 @@
   "version": "1.0.1",
   "description": "Provides a thin wrapper around LocalStorage/SessionStorage/InMemory Storage",
   "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "coverage": "npm test -- --coverage",
     "build": "tsc -p .",
-    "precommit": "npm test",
-    "release": "npm build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags"
+    "release": "cross-var \"npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags && npm publish\"",
+    "precommit": "npm test"
   },
   "repository": {
     "type": "git",
@@ -29,13 +29,14 @@
   "homepage": "https://github.com/MerifondNewMarkets/SimpleStorage#readme",
   "devDependencies": {
     "@types/jest": "^19.2.4",
+    "cross-var": "^1.0.3",
     "jest": "^20.0.4",
     "ts-jest": "^20.0.5"
   },
   "dependencies": {
     "typescript": "^2.3.4"
   },
-  "jest" : {
+  "jest": {
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
