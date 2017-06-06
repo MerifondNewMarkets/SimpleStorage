@@ -9,7 +9,7 @@
     "test:watch": "npm test -- --watch",
     "coverage": "npm test -- --coverage",
     "build": "tsc -p .",
-    "release": "cross-var npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags && npm publish",
+    "release": "cross-var \"npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags\"",
     "precommit": "npm test"
   },
   "repository": {
