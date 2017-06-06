@@ -29,11 +29,11 @@
   "homepage": "https://github.com/MerifondNewMarkets/SimpleStorage#readme",
   "devDependencies": {
     "@types/jest": "^19.2.4",
-    "cross-var": "^1.0.3",
     "jest": "^20.0.4",
     "ts-jest": "^20.0.5"
   },
   "dependencies": {
+    "cross-var": "git+https://git@github.com/MerifondNewMarkets/cross-var.git",
     "typescript": "^2.3.4"
   },
   "jest": {
