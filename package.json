@@ -34,7 +34,7 @@
     "ts-jest": "^20.0.5"
   },
   "dependencies": {
-    "typescript": "^2.3.4"
+    "typescript": "^4.0.3"
   },
   "jest": {
     "transform": {
